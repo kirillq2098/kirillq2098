@@ -10,6 +10,10 @@
 <p align="center">
   <a href="./README.en.md">English</a> ·
   <a href="./docs/PROJECTS.md">Проекты</a> ·
+  <a href="./docs/CASE_STUDIES.md">Case Studies</a> ·
+  <a href="./docs/ARCHITECTURE.md">Architecture</a> ·
+  <a href="./docs/ACHIEVEMENTS.md">Achievements</a> ·
+  <a href="./docs/SKILLS_MATRIX.md">Skills Matrix</a> ·
   <a href="./docs/CAREER.md">Профессиональная траектория</a> ·
   <a href="./docs/LEARNING_ROADMAP.md">Learning Roadmap</a>
 </p>
@@ -64,6 +68,15 @@
 Проект развивается как отдельная управленческая система, которая должна дополнять существующие CRM/ERP-инструменты, а не имитировать или заменять их без необходимости.
 
 [Подробнее о проектах →](./docs/PROJECTS.md)
+
+## Proof of work
+
+Портфолио разделяет описание проектов и доказательства инженерной работы:
+
+- **[Case Studies](./docs/CASE_STUDIES.md)** — проблема, ограничения, решения и подтверждения;
+- **[Architecture Evidence](./docs/ARCHITECTURE.md)** — component/data/event flows и архитектурные принципы;
+- **[Achievements](./docs/ACHIEVEMENTS.md)** — только подтверждённые результаты и следующие измеримые цели;
+- **[Skills Matrix](./docs/SKILLS_MATRIX.md)** — навыки с уровнем и evidence, без завышенной самооценки.
 
 ## Инженерный стек
 
