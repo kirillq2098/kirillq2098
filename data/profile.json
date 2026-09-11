@@ -84,5 +84,69 @@
     "Observability",
     "Distributed Systems",
     "AI Evaluation"
-  ]
+  ],
+  "learning_roadmap": {
+    "status": "planned",
+    "verified_at": "2026-09-11",
+    "document": "docs/LEARNING_ROADMAP.md",
+    "primary_path": [
+      {
+        "order": 1,
+        "provider": "OTUS",
+        "course": "Python-разработчик. Базовый уровень",
+        "url": "https://otus.ru/lessons/python-basic/",
+        "duration": "6 месяцев",
+        "price_rub": 130000,
+        "purpose": "Technical foundation for independent review of AI-generated backend code"
+      },
+      {
+        "order": 2,
+        "provider": "Яндекс Практикум PRO",
+        "course": "ИИ-инженер",
+        "url": "https://practicum.yandex.ru/ai-engineer/",
+        "duration": "4 месяца",
+        "price": "Not publicly listed on course page as of 2026-09-11",
+        "purpose": "Production Applied AI, RAG, agents, evaluation and observability"
+      },
+      {
+        "order": 3,
+        "provider": "OTUS",
+        "course": "ИИ-архитектор",
+        "url": "https://otus.ru/lessons/ai-architect/",
+        "duration": "4 месяца",
+        "price_rub": 126000,
+        "purpose": "End-to-end AI solution architecture"
+      }
+    ],
+    "alternatives": [
+      {
+        "provider": "Hexlet",
+        "course": "Python-разработчик",
+        "url": "https://ru.hexlet.io/programs/python",
+        "duration": "10-12 месяцев",
+        "price_rub_from": 85000
+      },
+      {
+        "provider": "OTUS",
+        "course": "LLM-инженер",
+        "url": "https://otus.ru/lessons/llm-driven-development/",
+        "duration": "4 месяца",
+        "price_rub": 120000
+      },
+      {
+        "provider": "OTUS",
+        "course": "Проектирование систем (System Design)",
+        "url": "https://otus.ru/lessons/system-design/",
+        "duration": "5 месяцев",
+        "price_rub": 134000
+      },
+      {
+        "provider": "Яндекс Практикум",
+        "course": "Системный аналитик",
+        "url": "https://practicum.yandex.ru/systems-analyst/",
+        "duration": "9 месяцев",
+        "price_rub_from": 113000
+      }
+    ]
+  }
 }
