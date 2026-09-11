@@ -34,6 +34,13 @@
     "delivery": ["Git", "GitHub", "GitHub Actions", "Docker", "Docker Compose"],
     "analysis": ["requirements discovery", "AS-IS/TO-BE", "process design", "technical documentation", "product documentation"]
   },
+  "proof_of_work": {
+    "case_studies": "docs/CASE_STUDIES.md",
+    "architecture": "docs/ARCHITECTURE.md",
+    "achievements": "docs/ACHIEVEMENTS.md",
+    "skills_matrix": "docs/SKILLS_MATRIX.md",
+    "policy": "Only evidence-backed statements; implementation, runtime and planned work are kept separate."
+  },
   "projects": [
     {
       "id": "flypingavia",
