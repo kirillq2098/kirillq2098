@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-11",
+  "person": {
+    "name": "Кирилл Акулов",
+    "name_en": "Kirill Akulov",
+    "github": "kirillq2098",
+    "location": "Новосибирск",
+    "headline": "AI Solutions Engineer · Applied AI · Business Automation",
+    "career_direction": "AI Solutions Engineer -> AI Solutions Architect"
+  },
+  "background": {
+    "previous_role": "Главный геодезист",
+    "transition_year": 2026,
+    "focus": [
+      "Applied AI",
+      "business automation",
+      "backend systems",
+      "solution architecture"
+    ]
+  },
+  "principles": [
+    "Understand the business problem before choosing technology",
+    "Separate implementation evidence from production evidence",
+    "Use AI agents as engineering tools, not as substitutes for accountability",
+    "Prefer usable systems with measurable value over impressive demos"
+  ],
+  "skills": {
+    "backend": ["Python", "FastAPI", "REST API", "webhooks", "async applications"],
+    "data": ["PostgreSQL", "SQLAlchemy 2", "Alembic", "SQLite"],
+    "integrations": ["Bitrix24 REST", "Telegram", "external APIs", "event-driven flows"],
+    "ai": ["LLM integration", "classification", "routing", "AI-assisted engineering"],
+    "reliability": ["idempotency", "transactions", "retry policies", "validation", "logging", "health/readiness"],
+    "delivery": ["Git", "GitHub", "GitHub Actions", "Docker", "Docker Compose"],
+    "analysis": ["requirements discovery", "AS-IS/TO-BE", "process design", "technical documentation", "product documentation"]
+  },
+  "projects": [
+    {
+      "id": "flypingavia",
+      "name": "FlyPingAvia",
+      "visibility": "public",
+      "url": "https://github.com/kirillq2098/FlyPingAvia",
+      "summary": "Flight-price monitoring product with alerts when a user-defined price threshold is reached.",
+      "stack": ["Python", "FastAPI", "aiogram", "SQLAlchemy", "APScheduler", "Telegram Mini App", "Travelpayouts", "Docker"],
+      "evidence": [
+        "Telegram bot and Mini App",
+        "signed Telegram initData authentication",
+        "background price checking",
+        "price alerts",
+        "deep-link attribution",
+        "health monitoring",
+        "product and technical documentation"
+      ]
+    },
+    {
+      "id": "service-automation-leadrouter",
+      "name": "Service Automation & LeadRouter",
+      "visibility": "private",
+      "summary": "Internal automation for incoming leads and service-request workflows in a manufacturing company.",
+      "stack": ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy async", "Alembic", "Bitrix24 REST", "LLM", "Docker", "GitHub Actions"],
+      "evidence": [
+        "DB-backed idempotency",
+        "transactional event processing",
+        "retry handling",
+        "LLM classification and routing",
+        "Bitrix24 integration",
+        "531 main-service tests",
+        "590 LeadRouter tests"
+      ],
+      "disclosure": "Commercial source code and internal data are not public."
+    },
+    {
+      "id": "topstyle-control",
+      "name": "TopStyle Control",
+      "visibility": "private",
+      "summary": "Internal planning and project-control system for projects, dependencies, progress and operational risks.",
+      "stack": ["FastAPI", "Next.js", "PostgreSQL", "Alembic", "Docker Compose", "RBAC"]
+    }
+  ],
+  "learning_focus": [
+    "System Design",
+    "Solution Architecture",
+    "Applied LLM Engineering",
+    "Observability",
+    "Distributed Systems",
+    "AI Evaluation"
+  ]
+}
