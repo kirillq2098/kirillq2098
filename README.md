@@ -10,7 +10,8 @@
 <p align="center">
   <a href="./README.en.md">English</a> ·
   <a href="./docs/PROJECTS.md">Проекты</a> ·
-  <a href="./docs/CAREER.md">Профессиональная траектория</a>
+  <a href="./docs/CAREER.md">Профессиональная траектория</a> ·
+  <a href="./docs/LEARNING_ROADMAP.md">Learning Roadmap</a>
 </p>
 
 ---
@@ -95,6 +96,8 @@
 ## Сейчас углубляю
 
 `System Design` · `Solution Architecture` · `Applied LLM Engineering` · `Observability` · `Distributed Systems` · `AI Evaluation`
+
+Мой текущий план обучения с рекомендованными программами, ценами и логикой выбора: **[Learning Roadmap →](./docs/LEARNING_ROADMAP.md)**.
 
 ## Статус портфолио
 
