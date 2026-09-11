@@ -1,0 +1,22 @@
+<svg fill="none" viewBox="0 0 1200 320" width="1200" height="320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#18284B"/>
+    </linearGradient>
+    <linearGradient id="a" x1="80" y1="250" x2="1080" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#54C1FF"/>
+      <stop offset="1" stop-color="#8B7CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="28" fill="url(#g)"/>
+  <circle cx="1050" cy="55" r="190" fill="#203C71" opacity=".28"/>
+  <circle cx="1120" cy="280" r="210" fill="#57388D" opacity=".16"/>
+  <path d="M76 246C300 171 514 280 735 181C868 121 944 78 1117 89" stroke="url(#a)" stroke-width="2" opacity=".55"/>
+  <circle cx="229" cy="213" r="7" fill="#54C1FF"/>
+  <circle cx="735" cy="181" r="7" fill="#79A7FF"/>
+  <circle cx="1030" cy="89" r="7" fill="#8B7CFF"/>
+  <text x="76" y="105" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Kirill Akulov</text>
+  <text x="78" y="153" fill="#B8C9E8" font-family="Arial, Helvetica, sans-serif" font-size="24">AI Solutions Engineer · Applied AI · Business Automation</text>
+  <text x="78" y="197" fill="#8097BD" font-family="Arial, Helvetica, sans-serif" font-size="18">From business process to production system.</text>
+</svg>
