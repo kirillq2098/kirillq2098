@@ -32,7 +32,9 @@ Stack: `Python`, `FastAPI`, `PostgreSQL`, `SQLAlchemy async`, `Alembic`, `Bitrix
 
 Engineering topics include DB-backed idempotency, transactional event processing, retry policies, LLM-based classification and routing, Bitrix24 integration and production-evidence discipline.
 
-Current repository evidence includes **531 tests for the main service and 590 tests for LeadRouter**. Commercial source code and internal data remain private.
+Recent verified work added an explicit client-agreement gate before engineer handoff, stage-driven responsibility assignment, protection against visit/task bootstrap races, synchronization of SPA titles from the authoritative 1C order number, and source-request context for ACT+DEFECT child cards.
+
+Latest verified CI: **915 passed, 4 skipped** for the main service and **590 passed** for LeadRouter. These are implementation/CI facts and are not presented as production deployment evidence.
 
 ### TopStyle Control
 
