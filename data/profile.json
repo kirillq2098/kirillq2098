@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-22",
   "person": {
     "name": "Кирилл Акулов",
     "name_en": "Kirill Akulov",
@@ -71,10 +71,21 @@
         "retry handling",
         "LLM classification and routing",
         "Bitrix24 integration",
-        "531 main-service tests",
-        "590 LeadRouter tests"
+        "explicit client-agreement gate before engineer handoff",
+        "stage-driven SPA responsibility assignment",
+        "bootstrap-race retry handling for visit/task binding",
+        "authoritative 1C order-number title synchronization",
+        "idempotent ACT+DEFECT child-card source context",
+        "915 main-service tests passed in latest verified CI run, 4 skipped",
+        "590 LeadRouter tests passed in latest verified CI run",
+        "main-tests and leadrouter-tests CI jobs completed successfully"
       ],
-      "disclosure": "Commercial source code and internal data are not public."
+      "production_evidence": [
+        "LeadRouter Cloudflare ingress previously confirmed",
+        "LeadRouter public health endpoint previously confirmed",
+        "GitHub Actions CI runtime confirmed"
+      ],
+      "disclosure": "Commercial source code and internal data are not public. Latest feature changes are not claimed as deployed without separate runtime evidence."
     },
     {
       "id": "topstyle-control",
