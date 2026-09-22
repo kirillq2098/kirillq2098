@@ -2,6 +2,19 @@
 
 Все существенные изменения публичного портфолио фиксируются здесь.
 
+## 2026-09-22
+
+### Updated
+
+- проверены доступные GitHub-репозитории и последние merged PR;
+- в `service-1c-so` подтверждены новые существенные инженерные изменения: client-agreement gate, stage-driven responsibility assignment, bootstrap-race protection, синхронизация SPA title из номера заказа 1С и source context для ACT+DEFECT split cards;
+- последний проверенный GitHub Actions run для основного сервиса: **915 passed, 4 skipped**;
+- последний проверенный LeadRouter CI: **590 passed**;
+- оба CI job завершились успешно;
+- README, English README, `data/profile.json` и `docs/PROJECTS.md` синхронизированы;
+- последние изменения не помечены как production deployment без отдельного runtime evidence;
+- по FlyPingAvia и TopStyle Control существенных новых изменений относительно уже зафиксированного состояния не добавлено.
+
 ## 2026-09-11
 
 ### Added
