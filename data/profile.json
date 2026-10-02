@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-10-02",
   "person": {
     "name": "Кирилл Акулов",
     "name_en": "Kirill Akulov",
@@ -26,13 +26,53 @@
     "Prefer usable systems with measurable value over impressive demos"
   ],
   "skills": {
-    "backend": ["Python", "FastAPI", "REST API", "webhooks", "async applications"],
-    "data": ["PostgreSQL", "SQLAlchemy 2", "Alembic", "SQLite"],
-    "integrations": ["Bitrix24 REST", "Telegram", "external APIs", "event-driven flows"],
-    "ai": ["LLM integration", "classification", "routing", "AI-assisted engineering"],
-    "reliability": ["idempotency", "transactions", "retry policies", "validation", "logging", "health/readiness"],
-    "delivery": ["Git", "GitHub", "GitHub Actions", "Docker", "Docker Compose"],
-    "analysis": ["requirements discovery", "AS-IS/TO-BE", "process design", "technical documentation", "product documentation"]
+    "backend": [
+      "Python",
+      "FastAPI",
+      "REST API",
+      "webhooks",
+      "async applications"
+    ],
+    "data": [
+      "PostgreSQL",
+      "SQLAlchemy 2",
+      "Alembic",
+      "SQLite"
+    ],
+    "integrations": [
+      "Bitrix24 REST",
+      "Telegram",
+      "external APIs",
+      "event-driven flows"
+    ],
+    "ai": [
+      "LLM integration",
+      "classification",
+      "routing",
+      "AI-assisted engineering"
+    ],
+    "reliability": [
+      "idempotency",
+      "transactions",
+      "retry policies",
+      "validation",
+      "logging",
+      "health/readiness"
+    ],
+    "delivery": [
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Docker",
+      "Docker Compose"
+    ],
+    "analysis": [
+      "requirements discovery",
+      "AS-IS/TO-BE",
+      "process design",
+      "technical documentation",
+      "product documentation"
+    ]
   },
   "proof_of_work": {
     "case_studies": "docs/CASE_STUDIES.md",
@@ -48,7 +88,16 @@
       "visibility": "public",
       "url": "https://github.com/kirillq2098/FlyPingAvia",
       "summary": "Flight-price monitoring product with alerts when a user-defined price threshold is reached.",
-      "stack": ["Python", "FastAPI", "aiogram", "SQLAlchemy", "APScheduler", "Telegram Mini App", "Travelpayouts", "Docker"],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "aiogram",
+        "SQLAlchemy",
+        "APScheduler",
+        "Telegram Mini App",
+        "Travelpayouts",
+        "Docker"
+      ],
       "evidence": [
         "Telegram bot and Mini App",
         "signed Telegram initData authentication",
@@ -64,7 +113,17 @@
       "name": "Service Automation & LeadRouter",
       "visibility": "private",
       "summary": "Internal automation for incoming leads and service-request workflows in a manufacturing company.",
-      "stack": ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy async", "Alembic", "Bitrix24 REST", "LLM", "Docker", "GitHub Actions"],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "SQLAlchemy async",
+        "Alembic",
+        "Bitrix24 REST",
+        "LLM",
+        "Docker",
+        "GitHub Actions"
+      ],
       "evidence": [
         "DB-backed idempotency",
         "transactional event processing",
@@ -92,7 +151,82 @@
       "name": "TopStyle Control",
       "visibility": "private",
       "summary": "Internal planning and project-control system for projects, dependencies, progress and operational risks.",
-      "stack": ["FastAPI", "Next.js", "PostgreSQL", "Alembic", "Docker Compose", "RBAC"]
+      "stack": [
+        "FastAPI",
+        "Next.js",
+        "PostgreSQL",
+        "Alembic",
+        "Docker Compose",
+        "RBAC"
+      ]
+    },
+    {
+      "id": "topstyle-planning",
+      "name": "TopStyle Planning",
+      "visibility": "private",
+      "summary": "Corporate planning system connecting project structure, milestones, readiness, materials, production, delivery, installation and weekly capacity allocation.",
+      "stack": [
+        ".NET 10",
+        "ASP.NET Core 10",
+        "PostgreSQL",
+        "GitHub Actions"
+      ],
+      "evidence": [
+        "Phase 15-26 recorded as COMPLETE / ACCEPTED",
+        "repeatable Plan 26 import loaded 25 objects and related planning data",
+        "weekly production demand and allocation down to object, section and floor",
+        "525 tests passed at Phase 26 acceptance",
+        "APS solver explicitly deferred"
+      ]
+    },
+    {
+      "id": "leadhunter",
+      "name": "LeadHunter",
+      "visibility": "private",
+      "summary": "Lead discovery and qualification pipeline that reduces noisy public opportunities to evidence-supported prospects and keeps outbound communication human-approved.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "Telegram Bot API",
+        "Gmail API",
+        "OpenAI",
+        "RSS"
+      ],
+      "evidence": [
+        "FL.ru RSS discovery",
+        "configured public Telegram source discovery",
+        "normalized URL deduplication",
+        "rule-based and OpenAI classification modes",
+        "Telegram notification flow",
+        "human approval before Gmail draft creation",
+        "no automatic outbound email by design"
+      ]
+    },
+    {
+      "id": "100k30",
+      "name": "100K30",
+      "visibility": "private",
+      "status": "active_experiment",
+      "summary": "30-day evidence-first go-to-market experiment targeting 100,000 RUB in revenue from AI and automation services.",
+      "evidence_as_of": "2026-10-02",
+      "evidence": [
+        "50 prospects",
+        "34 human-verified / qualified prospects",
+        "32 unique contacted prospects",
+        "34 confirmed Gmail send events",
+        "1 human reply",
+        "0 meetings",
+        "0 proposals",
+        "0 paid clients",
+        "0 RUB revenue"
+      ],
+      "principles": [
+        "Revenue First",
+        "evidence-first",
+        "Human Verification Gate",
+        "LLM LAST"
+      ]
     }
   ],
   "learning_focus": [
