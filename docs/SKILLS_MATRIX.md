@@ -1,56 +1,52 @@
-# Skills Matrix
+# Что я уже умею
 
-Матрица намеренно использует уровни, которые можно защитить на собеседовании.
+Я не хочу ставить себе проценты вроде «Python — 90%» или называть себя экспертом во всём подряд.
 
-## Уровни
+Поэтому делю навыки проще.
 
-- **Applied** — использовал в реальном проекте и могу объяснить ключевые решения.
-- **Working knowledge** — понимаю и применяю с опорой на документацию/AI-инструменты.
-- **Learning** — активно изучаю, но не заявляю как сильную практическую компетенцию.
-- **Not yet** — пока не включаю в профессиональное позиционирование.
+## Как читать таблицу
 
-| Навык | Уровень | Evidence |
+- **Использовал на практике** — применял в реальном проекте и могу объяснить, зачем это было нужно.
+- **Разбираюсь** — понимаю принцип и могу работать с этим, иногда обращаясь к документации и ИИ.
+- **Изучаю** — сейчас целенаправленно развиваюсь в этой теме.
+- **Пока не использовал** — не включаю это в список своих рабочих навыков.
+
+| Навык | Где я сейчас | Где применял |
 |---|---|---|
-| Python | Applied | FlyPingAvia, Service Automation, LeadRouter |
-| FastAPI | Applied | FlyPingAvia, Service Automation, TopStyle Control |
-| REST API / Webhooks | Applied | Bitrix24 integrations, external APIs, Telegram flows |
-| PostgreSQL | Applied | Service Automation, TopStyle Control |
-| SQLAlchemy 2 | Applied | Service Automation, FlyPingAvia |
-| Alembic | Applied | Service Automation, TopStyle Control |
-| Async Python | Working knowledge | async SQLAlchemy / backend flows |
-| Git / GitHub | Applied | all active repositories |
-| GitHub Actions | Applied | Service Automation / LeadRouter CI |
-| Docker | Applied | FlyPingAvia, internal services |
-| Docker Compose | Applied | TopStyle Control, development environments |
-| Bitrix24 REST | Applied | LeadRouter and service automation |
-| Telegram Bot / Mini App | Applied | FlyPingAvia |
-| LLM integration | Applied | LeadRouter classification/routing |
-| Structured AI classification | Applied | LeadRouter |
-| Idempotency | Applied | DB-backed integration events |
-| Transactions / retry model | Applied | Service Automation |
-| Health / readiness | Applied | multiple backend projects |
-| Requirements discovery | Applied | internal automation projects |
-| AS-IS / TO-BE | Applied | service and planning automation |
-| Technical documentation | Applied | architecture, project-state, workflow docs |
-| Product documentation | Applied | FlyPingAvia Product Vision / KPI / Strategy / Roadmap |
-| System Design | Learning | current career roadmap |
-| Solution Architecture | Learning | current career roadmap |
-| Observability | Learning | current career roadmap |
-| Distributed Systems | Learning | current career roadmap |
-| AI Evaluation / Evals | Learning | current career roadmap |
-| RAG | Learning | planned applied AI training |
-| AI Agents / LangGraph-class orchestration | Learning | planned applied AI training |
-| Kubernetes | Not yet | no confirmed project evidence |
-| Public cloud architecture | Not yet | no confirmed project evidence |
+| Python | Использовал на практике | FlyPingAvia, автоматизация сервиса, LeadHunter |
+| FastAPI | Использовал на практике | FlyPingAvia, сервисная система, TopStyle Control, LeadHunter |
+| Связь между программами через API | Использовал на практике | Bitrix24, Telegram, Gmail, внешние сервисы |
+| PostgreSQL | Использовал на практике | сервисная система, TopStyle Control, TopStyle Planning |
+| SQLAlchemy | Использовал на практике | сервисная система, FlyPingAvia |
+| Изменение структуры базы без потери данных | Использовал на практике | Alembic в нескольких проектах |
+| Асинхронная работа Python | Разбираюсь | серверные процессы и работа с базой |
+| Git и GitHub | Использовал на практике | все активные проекты |
+| Автоматическая проверка изменений | Использовал на практике | GitHub Actions в нескольких проектах |
+| Docker | Использовал на практике | FlyPingAvia и внутренние сервисы |
+| Bitrix24 | Использовал на практике | автоматизация обращений и сервиса |
+| Telegram-боты и мини-приложения | Использовал на практике | FlyPingAvia, LeadHunter |
+| Подключение больших языковых моделей | Использовал на практике | распределение обращений, LeadHunter |
+| Автоматическое распределение текста по категориям | Использовал на практике | LeadRouter |
+| Защита от повторного выполнения операции | Использовал на практике | сервисная система |
+| Работа с временными сбоями и повторными попытками | Использовал на практике | сервисная система |
+| Проверка состояния сервисов | Использовал на практике | несколько серверных проектов |
+| Сбор требований у сотрудников | Использовал на практике | внутренние проекты автоматизации |
+| Разбор процесса «как сейчас» и «как должно быть» | Использовал на практике | сервис и планирование |
+| Техническая документация | Использовал на практике | устройство систем и описание проектов |
+| Проектирование сложных систем | Изучаю | текущий план развития |
+| Архитектура ИИ-решений | Изучаю | текущий план развития |
+| Наблюдение за работой систем | Изучаю | текущий план развития |
+| Распределённые системы | Изучаю | текущий план развития |
+| Оценка качества работы ИИ | Изучаю | текущий план развития |
+| Поиск по собственным данным с помощью ИИ | Изучаю | запланированное обучение |
+| Системы из нескольких ИИ-помощников | Изучаю | запланированное обучение |
+| Kubernetes | Пока не использовал | нет подтверждённого проекта |
+| Архитектура публичных облаков | Пока не использовал | нет подтверждённого проекта |
 
-## Что эта матрица означает
+## Зачем мне такая таблица
 
-Она не пытается создать видимость senior-уровня по каждому инструменту. Цель — показать, где уже есть **практика**, где есть **рабочее понимание**, а где идёт **осознанное развитие**.
+Она нужна не для того, чтобы выглядеть специалистом во всём.
 
-Для повышения уровня навыка до `Applied` желательно иметь минимум одно из следующего:
+Наоборот — я хочу ясно видеть границу между тем, **что уже делал и проверял на реальном проекте**, и тем, **что пока только изучаю**.
 
-1. подтверждённый проект;
-2. архитектурное решение, которое можно объяснить и защитить;
-3. тесты / runtime evidence;
-4. измеримый production результат;
-5. публичный код или безопасный описательный кейс.
+Для меня навык переходит в категорию «использовал на практике», когда есть хотя бы один реальный проект, решение, проверка или результат, который я могу нормально объяснить.
