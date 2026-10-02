@@ -16,7 +16,7 @@
   <circle cx="229" cy="213" r="7" fill="#54C1FF"/>
   <circle cx="735" cy="181" r="7" fill="#79A7FF"/>
   <circle cx="1030" cy="89" r="7" fill="#8B7CFF"/>
-  <text x="76" y="105" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Kirill Akulov</text>
-  <text x="78" y="153" fill="#B8C9E8" font-family="Arial, Helvetica, sans-serif" font-size="24">AI Solutions Engineer · Applied AI · Business Automation</text>
-  <text x="78" y="197" fill="#8097BD" font-family="Arial, Helvetica, sans-serif" font-size="18">From business process to production system.</text>
+  <text x="76" y="105" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Кирилл Акулов</text>
+  <text x="78" y="153" fill="#B8C9E8" font-family="Arial, Helvetica, sans-serif" font-size="24">ИИ-решения · Автоматизация · Цифровые системы</text>
+  <text x="78" y="197" fill="#8097BD" font-family="Arial, Helvetica, sans-serif" font-size="18">От реальной рабочей проблемы до понятной работающей системы.</text>
 </svg>
