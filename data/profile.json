@@ -6,24 +6,24 @@
     "name_en": "Kirill Akulov",
     "github": "kirillq2098",
     "location": "Новосибирск",
-    "headline": "AI Solutions Engineer · Applied AI · Business Automation",
-    "career_direction": "AI Solutions Engineer -> AI Solutions Architect"
+    "headline": "Инженер по ИИ-решениям и автоматизации бизнеса",
+    "career_direction": "Инженер по ИИ-решениям -> Архитектор ИИ-решений"
   },
   "background": {
     "previous_role": "Главный геодезист",
     "transition_year": 2026,
     "focus": [
-      "Applied AI",
-      "business automation",
-      "backend systems",
-      "solution architecture"
+      "искусственный интеллект",
+      "автоматизация бизнеса",
+      "серверные системы",
+      "архитектура решений"
     ]
   },
   "principles": [
-    "Understand the business problem before choosing technology",
-    "Separate implementation evidence from production evidence",
-    "Use AI agents as engineering tools, not as substitutes for accountability",
-    "Prefer usable systems with measurable value over impressive demos"
+    "Сначала понять реальную проблему, потом выбирать технологии",
+    "Не путать написанный код с реально запущенной системой",
+    "Использовать ИИ как инструмент, но сохранять ответственность за результат",
+    "Предпочитать полезные работающие решения красивым демонстрациям"
   ],
   "skills": {
     "backend": [
@@ -79,7 +79,7 @@
     "architecture": "docs/ARCHITECTURE.md",
     "achievements": "docs/ACHIEVEMENTS.md",
     "skills_matrix": "docs/SKILLS_MATRIX.md",
-    "policy": "Only evidence-backed statements; implementation, runtime and planned work are kept separate."
+    "policy": "В портфолио добавляются только подтверждаемые факты. Идеи, сделанные функции, запущенные системы и измеримые результаты разделяются."
   },
   "projects": [
     {
