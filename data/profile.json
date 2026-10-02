@@ -87,7 +87,7 @@
       "name": "FlyPingAvia",
       "visibility": "public",
       "url": "https://github.com/kirillq2098/FlyPingAvia",
-      "summary": "Flight-price monitoring product with alerts when a user-defined price threshold is reached.",
+      "summary": "Сервис, который следит за ценами на авиабилеты и сообщает, когда цена достигает заданного пользователем уровня.",
       "stack": [
         "Python",
         "FastAPI",
@@ -99,20 +99,20 @@
         "Docker"
       ],
       "evidence": [
-        "Telegram bot and Mini App",
-        "signed Telegram initData authentication",
-        "background price checking",
-        "price alerts",
-        "deep-link attribution",
-        "health monitoring",
-        "product and technical documentation"
+        "Telegram-бот и мини-приложение",
+        "проверка входа пользователя через Telegram",
+        "фоновые проверки цен",
+        "уведомления о подходящей цене",
+        "партнёрские переходы",
+        "проверка состояния сервиса",
+        "описание продукта и устройства системы"
       ]
     },
     {
       "id": "service-automation-leadrouter",
       "name": "Service Automation & LeadRouter",
       "visibility": "private",
-      "summary": "Internal automation for incoming leads and service-request workflows in a manufacturing company.",
+      "summary": "Внутренняя система для обработки сервисных заявок и распределения входящих обращений в производственной компании.",
       "stack": [
         "Python",
         "FastAPI",
@@ -125,32 +125,32 @@
         "GitHub Actions"
       ],
       "evidence": [
-        "DB-backed idempotency",
-        "transactional event processing",
-        "retry handling",
-        "LLM classification and routing",
-        "Bitrix24 integration",
-        "explicit client-agreement gate before engineer handoff",
-        "stage-driven SPA responsibility assignment",
-        "bootstrap-race retry handling for visit/task binding",
-        "authoritative 1C order-number title synchronization",
-        "idempotent ACT+DEFECT child-card source context",
-        "915 main-service tests passed in latest verified CI run, 4 skipped",
-        "590 LeadRouter tests passed in latest verified CI run",
-        "main-tests and leadrouter-tests CI jobs completed successfully"
+        "защита от повторной обработки событий",
+        "безопасная обработка изменений в базе",
+        "повторные попытки при временных сбоях",
+        "классификация и распределение обращений с помощью ИИ",
+        "связь с Bitrix24",
+        "согласование клиента перед передачей задачи инженеру",
+        "назначение ответственных в зависимости от этапа",
+        "защита от ошибки при одновременном создании выезда и задачи",
+        "синхронизация названий по номеру заказа 1С",
+        "контекст исходной заявки в дочерних карточках",
+        "915 тестов основной системы прошли успешно, 4 пропущены",
+        "590 тестов системы распределения обращений прошли успешно",
+        "автоматические проверки обеих частей завершились успешно"
       ],
       "production_evidence": [
-        "LeadRouter Cloudflare ingress previously confirmed",
-        "LeadRouter public health endpoint previously confirmed",
-        "GitHub Actions CI runtime confirmed"
+        "ранее подтверждалась работа внешнего входа LeadRouter через Cloudflare",
+        "ранее подтверждалась публичная страница состояния LeadRouter",
+        "работа автоматических проверок GitHub подтверждена"
       ],
-      "disclosure": "Commercial source code and internal data are not public. Latest feature changes are not claimed as deployed without separate runtime evidence."
+      "disclosure": "Коммерческий код и внутренние данные не публикуются. Новая функция не считается реально запущенной без отдельной проверки."
     },
     {
       "id": "topstyle-control",
       "name": "TopStyle Control",
       "visibility": "private",
-      "summary": "Internal planning and project-control system for projects, dependencies, progress and operational risks.",
+      "summary": "Внутренняя система для управления проектами, сроками, зависимостями, прогрессом и рисками.",
       "stack": [
         "FastAPI",
         "Next.js",
@@ -164,7 +164,7 @@
       "id": "topstyle-planning",
       "name": "TopStyle Planning",
       "visibility": "private",
-      "summary": "Corporate planning system connecting project structure, milestones, readiness, materials, production, delivery, installation and weekly capacity allocation.",
+      "summary": "Корпоративная система планирования, которая связывает объекты, этапы, материалы, производство, доставку, монтаж и недельное распределение мощности.",
       "stack": [
         ".NET 10",
         "ASP.NET Core 10",
@@ -172,18 +172,18 @@
         "GitHub Actions"
       ],
       "evidence": [
-        "Phase 15-26 recorded as COMPLETE / ACCEPTED",
-        "repeatable Plan 26 import loaded 25 objects and related planning data",
-        "weekly production demand and allocation down to object, section and floor",
-        "525 tests passed at Phase 26 acceptance",
-        "APS solver explicitly deferred"
+        "этапы разработки с 15-го по 26-й отмечены как завершённые и принятые",
+        "повторяемый импорт плана загрузил 25 объектов и связанные данные",
+        "реализован расчёт недельной потребности и распределение до объекта, секции и этажа",
+        "при принятии 26-го этапа прошло 525 тестов",
+        "более сложный автоматический планировщик отдельно помечен как отложенный"
       ]
     },
     {
       "id": "leadhunter",
       "name": "LeadHunter",
       "visibility": "private",
-      "summary": "Lead discovery and qualification pipeline that reduces noisy public opportunities to evidence-supported prospects and keeps outbound communication human-approved.",
+      "summary": "Система, которая ищет потенциальные заказы, убирает шум и показывает только подходящие заявки, оставляя решение об отправке письма человеку.",
       "stack": [
         "Python",
         "FastAPI",
@@ -194,38 +194,38 @@
         "RSS"
       ],
       "evidence": [
-        "FL.ru RSS discovery",
-        "configured public Telegram source discovery",
-        "normalized URL deduplication",
-        "rule-based and OpenAI classification modes",
-        "Telegram notification flow",
-        "human approval before Gmail draft creation",
-        "no automatic outbound email by design"
+        "поиск через открытые ленты FL.ru",
+        "поиск в заранее указанных открытых Telegram-каналах",
+        "удаление повторяющихся заявок",
+        "автоматическая оценка и распределение заявок",
+        "уведомления в Telegram",
+        "подготовка черновика Gmail только после решения человека",
+        "автоматическая отправка писем специально не реализована"
       ]
     },
     {
       "id": "100k30",
       "name": "100K30",
       "visibility": "private",
-      "status": "active_experiment",
-      "summary": "30-day evidence-first go-to-market experiment targeting 100,000 RUB in revenue from AI and automation services.",
+      "status": "активный эксперимент",
+      "summary": "30-дневный эксперимент с целью заработать 100 000 ₽ на услугах автоматизации и ИИ, проверяя весь путь от поиска проблемы до оплаты.",
       "evidence_as_of": "2026-10-02",
       "evidence": [
-        "50 prospects",
-        "34 human-verified / qualified prospects",
-        "32 unique contacted prospects",
-        "34 confirmed Gmail send events",
-        "1 human reply",
-        "0 meetings",
-        "0 proposals",
-        "0 paid clients",
-        "0 RUB revenue"
+        "50 компаний в работе",
+        "34 компании подтверждены вручную как подходящие",
+        "32 компании получили обращение",
+        "34 отправленных письма подтверждены в Gmail",
+        "1 живой ответ",
+        "0 встреч",
+        "0 коммерческих предложений",
+        "0 оплаченных клиентов",
+        "0 ₽ выручки"
       ],
       "principles": [
-        "Revenue First",
-        "evidence-first",
-        "Human Verification Gate",
-        "LLM LAST"
+        "Сначала выручка",
+        "Сначала подтверждения",
+        "Ручная проверка перед важным действием",
+        "ИИ используется в последнюю очередь, где он действительно нужен"
       ]
     }
   ],
@@ -249,7 +249,7 @@
         "url": "https://otus.ru/lessons/python-basic/",
         "duration": "6 месяцев",
         "price_rub": 130000,
-        "purpose": "Technical foundation for independent review of AI-generated backend code"
+        "purpose": "Техническая база, чтобы самостоятельно понимать и проверять код, созданный ИИ"
       },
       {
         "order": 2,
@@ -257,8 +257,8 @@
         "course": "ИИ-инженер",
         "url": "https://practicum.yandex.ru/ai-engineer/",
         "duration": "4 месяца",
-        "price": "Not publicly listed on course page as of 2026-09-11",
-        "purpose": "Production Applied AI, RAG, agents, evaluation and observability"
+        "price": "Публичная стоимость на странице курса не указана",
+        "purpose": "Практическая работа с ИИ-сервисами, поиском по данным, ИИ-помощниками и оценкой качества"
       },
       {
         "order": 3,
@@ -267,7 +267,7 @@
         "url": "https://otus.ru/lessons/ai-architect/",
         "duration": "4 месяца",
         "price_rub": 126000,
-        "purpose": "End-to-end AI solution architecture"
+        "purpose": "Проектирование ИИ-решений целиком — от задачи бизнеса до работающей системы"
       }
     ],
     "alternatives": [
