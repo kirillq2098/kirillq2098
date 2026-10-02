@@ -1,152 +1,142 @@
-# Architecture Evidence
+# Как устроены мои системы
 
-Этот раздел показывает не только технологии, но и **как я раскладываю систему на компоненты, потоки и границы ответственности**.
+Этот раздел чуть более технический, но я постарался оставить его понятным.
 
-## 1. Service Automation & LeadRouter
+Здесь мне важно показать не только список технологий, а **как я думаю о системе целиком: кто с кем общается, где хранятся данные, что может сломаться и кто за что отвечает**.
 
-### Context
+## 1. Автоматизация сервиса и распределения обращений
+
+### Общая схема
 
 ```mermaid
 graph LR
-    A[Email / Calls / Chat / Forms] --> B[Bitrix24]
-    B --> C[Webhook / Intake]
-    C --> D[LeadRouter]
-    D --> E[LLM Classifier]
-    D --> F[Persistence]
-    D --> G[Routing Rules]
-    G --> H[CRM stage / owner / review]
-    F --> I[Audit / Idempotency / Retry]
+    A[Почта / звонки / чаты / формы] --> B[Bitrix24]
+    B --> C[Приём обращения]
+    C --> D[Система распределения]
+    D --> E[ИИ для понимания текста]
+    D --> F[База данных]
+    D --> G[Правила маршрутизации]
+    G --> H[Нужный отдел / сотрудник / ручная проверка]
+    F --> I[История / защита от дублей / повторные попытки]
 ```
 
-### Processing sequence
+### Что происходит с новым обращением
 
 ```mermaid
 sequenceDiagram
-    participant S as External Source
-    participant API as FastAPI
-    participant DB as PostgreSQL
-    participant AI as LLM Provider
+    participant S as Внешний источник
+    participant API as Сервис
+    participant DB as База данных
+    participant AI as ИИ
     participant CRM as Bitrix24
 
-    S->>API: webhook(event_id, payload)
-    API->>DB: create PROCESSING if unique
-    alt duplicate event
-        DB-->>API: existing event
-        API-->>S: no second processing
-    else new event
-        API->>AI: structured classification
-        AI-->>API: route + confidence + status
-        API->>DB: persist result
-        API->>CRM: permitted action / review route
-        API->>DB: mark PROCESSED
-        API-->>S: success
+    S->>API: новое обращение
+    API->>DB: проверить, не обрабатывали ли его раньше
+    alt обращение уже было
+        DB-->>API: запись найдена
+        API-->>S: повторно не обрабатывать
+    else новое обращение
+        API->>AI: понять содержание
+        AI-->>API: предложить направление
+        API->>DB: сохранить результат
+        API->>CRM: выполнить разрешённое действие
+        API->>DB: отметить обработку завершённой
+        API-->>S: готово
     end
 ```
 
-### Architectural concerns
+### Что для меня здесь важно
 
-- idempotency before side effects;
-- explicit transactional boundaries;
-- retryable failures separated from business failures;
-- read/write permissions constrained at integration layer;
-- AI response treated as untrusted structured input;
-- observable state instead of invisible automation.
+- сначала защититься от повторного выполнения, а уже потом что-то менять во внешних системах;
+- временный сбой не должен превращаться в ошибку самой заявки;
+- важные состояния должны быть видны, а не прятаться внутри «магической автоматизации»;
+- ответ ИИ нужно проверять так же, как любые внешние данные;
+- наличие написанного кода ещё не означает, что функция уже запущена в реальной работе.
 
 ---
 
 ## 2. FlyPingAvia
 
-### Container view
+### Общая схема
 
 ```mermaid
 graph TB
-    U[Telegram User] --> TG[Telegram Bot / Mini App]
-    TG --> API[FastAPI]
-    API --> DB[(Subscription Storage)]
-    SCH[APScheduler] --> CHECK[Price Checker]
-    CHECK --> P[Travelpayouts / Price Provider]
+    U[Пользователь Telegram] --> TG[Бот / мини-приложение]
+    TG --> API[Сервис]
+    API --> DB[(Подписки)]
+    SCH[Планировщик] --> CHECK[Проверка цен]
+    CHECK --> P[Источник цен]
     CHECK --> DB
-    CHECK --> N[Notification Service]
+    CHECK --> N[Отправка уведомления]
     N --> TG
-    API --> ATTR[Attribution / Deep Links]
-    API --> HEALTH[Health / Readiness]
+    API --> HEALTH[Проверка состояния]
 ```
 
-### Primary user flow
+### Как выглядит путь пользователя
 
 ```mermaid
 sequenceDiagram
-    participant U as User
-    participant APP as Telegram Mini App
-    participant API as FastAPI
-    participant DB as Storage
-    participant SCH as Scheduler
-    participant P as Price Provider
+    participant U as Пользователь
+    participant APP as Мини-приложение
+    participant API as Сервис
+    participant DB as Хранилище
+    participant SCH as Планировщик
+    participant P as Источник цен
 
-    U->>APP: route + dates + target price
-    APP->>API: signed Telegram initData + watch
-    API->>API: verify initData
-    API->>DB: save watch
-    SCH->>P: periodic price check
-    P-->>SCH: current offers
-    SCH->>DB: compare with threshold
-    alt threshold reached
-        SCH-->>U: price alert
+    U->>APP: маршрут + даты + нужная цена
+    APP->>API: сохранить наблюдение
+    API->>API: проверить пользователя
+    API->>DB: сохранить
+    SCH->>P: периодически проверить цену
+    P-->>SCH: текущие предложения
+    SCH->>DB: сравнить с нужной ценой
+    alt цена подходит
+        SCH-->>U: отправить уведомление
     end
 ```
 
-### Architectural concerns
+### Что для меня здесь важно
 
-- authentication boundary at Telegram initData;
-- user interaction separated from scheduled work;
-- provider failures must not corrupt watches;
-- development tunnel and production URL are explicitly separated;
-- health/recovery considered part of the product, not an afterthought.
+- пользовательские действия и фоновые проверки разделены;
+- временная ошибка источника цен не должна удалять подписку;
+- настройки для разработки не должны случайно попадать в рабочую среду;
+- проверка состояния сервиса — такая же часть продукта, как кнопки и экраны.
 
 ---
 
 ## 3. TopStyle Control
 
-### Position in enterprise landscape
+### Как система должна жить рядом с другими программами
 
 ```mermaid
 graph LR
     CRM[Bitrix24] --> TC[TopStyle Control]
-    ERP[1C / operational systems] --> TC
-    MAN[Manual / imported data] --> TC
-    TC --> WEB[Planning & Control UI]
+    ERP[1С и рабочие системы] --> TC
+    MAN[Ручные и загруженные данные] --> TC
+    TC --> WEB[Единый экран управления]
     TC --> DB[(PostgreSQL)]
-    WEB --> PM[Managers / planners / executives]
+    WEB --> PM[Руководители и планировщики]
 ```
 
-**Design principle:** TopStyle Control is intended as a management and planning layer. It should integrate with existing systems rather than duplicate every function of CRM or ERP.
+Главная идея простая: **TopStyle Control не должен пытаться заменить вообще всё**.
 
-### Application containers
+CRM продолжает заниматься своей работой, 1С — своей, а новая система собирает данные, нужные для планирования и управленческого контроля.
 
-```mermaid
-graph TB
-    WEB[Next.js Frontend] --> API[FastAPI Backend]
-    API --> DB[(PostgreSQL)]
-    MIG[Alembic] --> DB
-    AUTH[Authentication / RBAC] --> API
-    OPS[Docker Compose / Ops Scripts] --> WEB
-    OPS --> API
-    OPS --> DB
-```
+## Несколько правил, которых я стараюсь придерживаться
 
-## Architecture principles I use
+1. **Сначала понять границы системы.** Что она должна делать, а что ей вообще не принадлежит.
+2. **Сначала защита от дублей, потом повторные попытки.** Иначе система может дважды выполнить одно и то же действие.
+3. **Важное состояние должно быть видно.** Если автоматика что-то делает, человек должен понимать, где процесс находится сейчас.
+4. **ИИ — это часть системы, а не вся система.** Его ответы нужно ограничивать правилами и проверками.
+5. **Сделано и реально запущено — не одно и то же.** Я стараюсь не смешивать эти понятия.
+6. **Чем проще решение, тем лучше — пока простота не мешает надёжности и развитию.**
 
-1. **Business boundary before framework.** First define what the system owns and what it should not own.
-2. **Idempotency before retries.** Retrying unsafe side effects without idempotency creates duplicate business operations.
-3. **State is explicit.** Important automation states must be inspectable and auditable.
-4. **AI is a component, not the architecture.** LLM use should be bounded by contracts, validation, fallback and evaluation.
-5. **Implementation ≠ production.** Repository evidence, tests and runtime evidence are separate evidence classes.
-6. **Prefer the simplest architecture that preserves reliability and future evolution.** Microservices are not a default goal.
+## Что хочу добавить сюда дальше
 
-## Next architecture evidence to add
+По мере развития проектов хочу показывать:
 
-- C4 Context / Container diagrams generated from confirmed project state;
-- ADR examples for important design decisions;
-- threat model for public-facing AI services;
-- observability model: logs, metrics, traces, SLO;
-- cost model for LLM/API-dependent flows.
+- более наглядные схемы взаимодействия систем;
+- примеры важных решений и почему был выбран именно такой вариант;
+- разбор возможных угроз для открытых сервисов;
+- как я слежу за ошибками и состоянием работающих систем;
+- сколько стоит работа внешних сервисов и искусственного интеллекта.
