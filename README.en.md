@@ -42,6 +42,16 @@ An internal planning and project-control system intended to turn fragmented manu
 
 Stack: `FastAPI`, `Next.js`, `PostgreSQL`, `Alembic`, `Docker Compose`, `RBAC`.
 
+### 100K30
+
+A 30-day evidence-first experiment with a concrete goal: earn **100,000 RUB** from AI and automation services.
+
+By October 3, 2026, the project tracked **70 companies**, contacted **45 unique prospects**, and had **47 confirmed Gmail send events**. One real reply had been received so far, a decline; meetings, proposals, paid clients and revenue were still at zero.
+
+The workflow is partially automated while keeping human approval at the important decision points. A daily process can research up to 20 new companies and prepare outreach drafts, but verification and sending remain explicitly human-controlled. A separate Gmail watcher surfaces real prospect replies without sending automatic responses.
+
+The project also has an automated public diary: meaningful changes from GitHub and real Gmail replies can be turned into a Russian-language Instagram post with a generated visual and scheduled through Metricool to **@ai_freelance_tut**. If nothing meaningful happened, nothing is published.
+
 ## Engineering areas
 
 - Python backend and FastAPI
