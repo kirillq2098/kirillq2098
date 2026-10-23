@@ -46,11 +46,13 @@ Stack: `FastAPI`, `Next.js`, `PostgreSQL`, `Alembic`, `Docker Compose`, `RBAC`.
 
 A 30-day evidence-first experiment with a concrete goal: earn **100,000 RUB** from AI and automation services.
 
-By October 3, 2026, the project tracked **70 companies**, contacted **45 unique prospects**, and had **47 confirmed Gmail send events**. One real reply had been received so far, a decline; meetings, proposals, paid clients and revenue were still at zero.
+As of October 4, 2026, the project registered **134 prospects**, **65 contacted prospects**, and **68 confirmed Gmail send events**. One permanent address failure was recorded and replaced. There was **one reply (a decline)**, no meetings or proposals, and **0 RUB revenue**. The latest batch reviewed 54 companies and recorded 20 first contacts without a known permanent delivery failure. Sent messages are not proof of delivery.
 
-The workflow is partially automated while keeping human approval at the important decision points. A daily process can research up to 20 new companies and prepare outreach drafts, but verification and sending remain explicitly human-controlled. A separate Gmail watcher surfaces real prospect replies without sending automatic responses.
+The outreach process now allows rule-governed autonomous qualification and sending under standing authorization, while human-verified counts remain distinct. Automated follow-up and publication should not be confused with demonstrated ongoing operation.
 
-The project also has an automated public diary: meaningful changes from GitHub and real Gmail replies can be turned into a Russian-language Instagram post with a generated visual and scheduled through Metricool to **@ai_freelance_tut**. If nothing meaningful happened, nothing is published.
+### TopStyle Planning — recent pilot work
+
+I added backward planning from the handover deadline, a read-only weekly load and overload view, and shared PostgreSQL persistence for the pilot plan. The code and pilot verification are documented; a company-wide production rollout has not been established.
 
 ## Engineering areas
 
